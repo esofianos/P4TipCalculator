@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#D8F487"
+    >
+    <LinearLayout
+        tools:context=".MainActivity"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        >
+
+
+        <EditText
+            android:layout_margin="10dp"
+            android:padding="12dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:maxLength="6"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Enter Amount"
+            android:background="#B692F6"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:id="@+id/et_amount"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_percent"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:labelFor="@+id/editText_BillAmount"
+            android:textSize="16sp"
+            android:text="15%"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <SeekBar
+                android:id="@+id/sb_percent"
+                android:layout_gravity="fill_horizontal"
+                android:progress="15"
+                android:max="30"
+                android:layout_height="wrap_content"
+                android:layout_width="350dp"
+                />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+            <RadioButton
+                android:id="@+id/radioBut_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"/>
+            <RadioButton
+                android:id="@+id/radioBut_Tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIP"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"/>
+            <RadioButton
+                android:id="@+id/radioBut_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:text="Tip"
+                android:textColor="@android:color/black"
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="28sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="20dp"
+                android:background="#85B4DA"
+                android:gravity="center"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:text="Total"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="10dp"
+                android:background="#F68A82"
+                android:gravity="center"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:text="Total Per Person"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/tv_tpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="20dp"
+                android:background="#F68A82"
+                android:gravity="center"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
